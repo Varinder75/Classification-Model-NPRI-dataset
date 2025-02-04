@@ -35,6 +35,40 @@ Initial steps include data cleaning, handling missing values, and normalizing da
    data = pd.read_csv('npri_data.csv')
    print(data.head())
    ```
+2. **Handling missing values:**
+   Handle missing values using imputation or dropping rows.
+   ```python
+   data.fillna(data.mean(), inplace=True)
+   ```
+3. **Feature engineering:**
+   ```python
+   # Select relevant columns
+releases_filtered = releases_df[['Reporting_Year / Année', 'Substance Name (English) / Nom de substance (Anglais)',
+                                 'Number of employees',
+                                 'Air_Releases', 'Land_Releases', 'Water_Releases',
+                                 'Total_Releases'
+                                      ]]
+
+# Melt the DataFrame to long format
+releases_long = releases_filtered.melt(
+    id_vars=['Reporting_Year / Année', 'Substance Name (English) / Nom de substance (Anglais)',
+             'Number of employees'],
+    var_name='Release_Type',
+    value_name='Release'
+)
+
+# Convert the year to datetime format
+releases_long['Reporting_Year / Année'] = pd.to_datetime(releases_long['Reporting_Year / Année'], format='%Y')
+
+# Inspect the transformed DataFrame
+print(releases_long.head())
+```
+
+# Convert the year to datetime format
+releases_long['Reporting_Year / Année'] = pd.to_datetime(releases_long['Reporting_Year / Année'], format='%Y')
+
+# Inspect the transformed DataFrame
+print(releases_long.head())  
 ### Exploratory Data Analysis (EDA): 
 Visualizations and summary statistics to understand the distribution of contaminants and key features influencing emissions.
 ### Modeling: 
