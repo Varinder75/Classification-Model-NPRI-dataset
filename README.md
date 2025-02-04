@@ -147,8 +147,9 @@ Support Vector Machine (SVM)
 Achieved the highest accuracy with *Random Forest Classifier*.
 
 ## Dependencies
-Python 3.8+
-Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+-> Python 3.8+
+
+-> Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
 
 ## Results and Visualizations
 Visualizations were created to represent the emission trends of CACs by region and industry, showing insights into high-pollution areas and industry-specific emissions.
