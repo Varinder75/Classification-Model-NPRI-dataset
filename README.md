@@ -158,7 +158,9 @@ Visualizations were created to represent the emission trends of CACs by region a
 Possible improvements could include:
 
 •Fine-tuning models using cross-validation.
+
 •Experimenting with ensemble methods to improve accuracy.
+
 •Expanding features to include socio-economic data for deeper analysis.
 
 ## Acknowledgments
