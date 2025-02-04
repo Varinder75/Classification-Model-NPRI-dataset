@@ -1,6 +1,7 @@
 # National Pollutant Release Inventory (NPRI) Classification Models for Criteria Air Contaminants
 ## Project Overview
 This project aims to predict trends in the release of criteria air contaminants (CACs) in Canada using data from the National Pollutant Release Inventory (NPRI). These contaminants include sulfur dioxide (SO₂), nitrogen oxides (NOₓ), volatile organic compounds (VOCs), particulate matter (PM), and carbon monoxide (CO). The goal is to predict whether emissions of these pollutants will increase, decrease, or remain stable in 2023, which is crucial for regulatory and environmental decision-making.
+-> We chose to focus on these specific contaminants because they are commonly known as "criteria air contaminants" that are used to assess air quality and public health, making them a priority for environmental regulations.
 
 ## Dataset
 The dataset used in this project is sourced from the National Pollutant Release Inventory (NPRI), which tracks pollutants released to air, water, and land in Canada. It contains emissions data across multiple industries and regions, as well as other environmental variables.
@@ -23,6 +24,7 @@ Carbon Monoxide (CO)
 
 ## Features:
 Key features include geographic location, industry classification, reported amounts of emissions, and year of data reporting, among other environmental and industry-specific factors.
+-> We chose the most relevant columns for this project, as emissions data and industry characteristics are the primary factors influencing pollutant release. Including too many columns could introduce noise and complexity.
 
 ## Project Structure
 ### Data Preprocessing: 
