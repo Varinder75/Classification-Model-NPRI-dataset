@@ -1,10 +1,17 @@
 # National Pollutant Release Inventory (NPRI) Classification Models for Criteria Air Contaminants
 ## Project Overview
-This project aims to predict trends in the release of criteria air contaminants in Canada using data from the National Pollutant Release Inventory (NPRI). Criteria air contaminants (CACs) include pollutants like sulfur dioxide, nitrogen oxides, volatile organic compounds, particulate matter, and carbon monoxide. These contaminants impact air quality and human health, making it crucial to understand and predict their trends.
+This project aims to predict trends in the release of criteria air contaminants (CACs) in Canada using data from the National Pollutant Release Inventory (NPRI). These contaminants include sulfur dioxide (SO₂), nitrogen oxides (NOₓ), volatile organic compounds (VOCs), particulate matter (PM), and carbon monoxide (CO). The goal is to predict whether emissions of these pollutants will increase, decrease, or remain stable in 2023, which is crucial for regulatory and environmental decision-making.
 
 ## Dataset
-The dataset used in this project is sourced from the National Pollutant Release Inventory (NPRI), which tracks pollutants released to air, water, and land in Canada. The dataset includes information on emissions of various contaminants across multiple industries and regions, along with other environmental variables.
+The dataset used in this project is sourced from the National Pollutant Release Inventory (NPRI), which tracks pollutants released to air, water, and land in Canada. It contains emissions data across multiple industries and regions, as well as other environmental variables.
 
+## Key Dataset Features:
+•Year: Year of data reporting.
+•Region: Geographic location (e.g., province, city).
+•Industry Classification: Type of industry (e.g., manufacturing, agriculture).
+•Pollutants: Emission amounts of pollutants (SO₂, NOₓ, VOCs, PM, CO).
+•Emissions: Amount of pollutants released (in metric tons).
+•Emission Change: Difference in emissions between 2022 and 2023.
 ## Target Variables: 
 The model focuses on predicting the trends for the following CACs:
 
@@ -13,12 +20,21 @@ Nitrogen Oxides (NOₓ)
 Volatile Organic Compounds (VOCs)
 Particulate Matter (PM)
 Carbon Monoxide (CO)
+
 ## Features:
 Key features include geographic location, industry classification, reported amounts of emissions, and year of data reporting, among other environmental and industry-specific factors.
 
 ## Project Structure
 ### Data Preprocessing: 
 Initial steps include data cleaning, handling missing values, and normalizing data where necessary.
+1. **Loading Data:**
+   Load the dataset into a Pandas DataFrame.
+
+   ```python
+   import pandas as pd
+   data = pd.read_csv('npri_data.csv')
+   print(data.head())
+   ```
 ### Exploratory Data Analysis (EDA): 
 Visualizations and summary statistics to understand the distribution of contaminants and key features influencing emissions.
 ### Modeling: 
